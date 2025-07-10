@@ -34,7 +34,7 @@ To view this portfolio locally:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/your-portfolio-repo.git](https://github.com/your-username/your-portfolio-repo.git)
+    git clone [https://github.com/pedromc11/pedromc11.github.io.git](https://github.com/pedromc11/pedromc11.github.io.git)
     ```
 2.  **Navigate to the project directory:**
     ```bash
@@ -48,9 +48,7 @@ To view this portfolio locally:
 
 Feel free to reach out if you have any questions, opportunities, or just want to connect!
 
-* **Email:** [Your Email Address]
-* **LinkedIn:** [Your LinkedIn Profile URL]
-* **GitHub:** [Your GitHub Profile URL]
+* **Email:** [pedromceuropa@gmail.com]
 
 ---
 
