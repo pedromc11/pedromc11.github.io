@@ -1,143 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pedro Mena Portfolio</title>
-  <meta name="description" content="Pedro Mena Portfolio - QA Tester, DevOps, AI & Machine Learning, IT Support, Backend Developer. Explore my proyects and experiences." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-lang-key="metaTitle">Pedro Mena Portfolio</title>
+    <meta name="description" content="Pedro Mena Portfolio - QA Tester, DevOps, AI & Machine Learning, IT Support, Backend Developer. Explore my projects and experiences."/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="logo">Pedro Mena</div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education & Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <button onclick="toggleTheme()" class="theme-toggle-btn">Toggle Theme</button>
-    </div>
-  </header>
+    <header>
+        <div class="container">
+            <div class="logo">
+            <img src="images/name.jpg" alt="Pedro Mena Logo" class="logo-img">
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home" data-lang-key="navHome">Home</a></li>
+                    <li><a href="#about" data-lang-key="navAbout">About</a></li>
+                    <li><a href="#education" data-lang-key="navEducation">Education & Experience</a></li>
+                    <li><a href="#skills" data-lang-key="navSkills">Skills</a></li>
+                    <li><a href="#projects" data-lang-key="navProjects">Projects</a></li>
+                    <li><a href="#contact" data-lang-key="navContact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <img src="images/flag_spain.png" alt="Bandera de España" class="flag-icon" data-lang="es">
+                <img src="images/flag_uk.png" alt="Bandera de Reino Unido" class="flag-icon active-lang" data-lang="en">
+            </div>
+        </div>
+    </header>
 
-  <section id="home" class="section">
-    <div class="home-content">
-      <h1>Pedro Mena</h1>
-      <h2>QA Tester | DevOps | AI & Machine Learning | IT Support | Backend Developer</h2>
-      <p class="dev-msg">This website is under development!!!!!</p>
-      <a href="https://github.com/pedromc11" class="btn" target="_blank">See My Work</a>
-    </div>
-  </section>
+    <section id="home" class="section home-section">
+        <div class="home-content">
+            <h1 data-lang-key="homeName">Pedro Mena</h1>
+            <h2 data-lang-key="homeTitle">QA Tester | DevOps | AI & Machine Learning | IT Support | Backend Developer</h2>
+            <a href="https://github.com/pedromc11" class="btn" target="_blank" data-lang-key="homeButton">See My Work</a>
+        </div>
+    </section>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <div class="profile">
-      <img src="images/profile.jpg" alt="Portrait of Pedro Mena, a passionate technology enthusiast" class="profile-img" />
-      <p>I’m a passionate technology enthusiast, always eager to explore new ideas and turn them into meaningful experiences. I enjoy working on ambitious and creative projects that challenge me to grow, think differently, and keep learning every day.</p>
-    </div>
-  </section>
+    <section id="about" class="section">
+        <h2 data-lang-key="aboutTitle">About Me</h2>
+        <div class="profile" data-aos="fade-up">
+            <img src="images/profile.jpg" alt="Portrait of Pedro Mena, a passionate technology enthusiast" class="profile-img" />
+            <p data-lang-key="aboutText">I’m a passionate technology enthusiast, always eager to explore new ideas and turn them into meaningful experiences. I enjoy working on ambitious and creative projects that challenge me to grow, think differently, and keep learning every day.</p>
+        </div>
+    </section>
 
-  <section id="education" class="section">
-    <h2>Education & Experience</h2>
+    <section id="education" class="section bg-light-gray">
+    <h2 data-lang-key="educationTitle">Education & Experience</h2>
     <div class="timeline">
-      <div class="timeline-item" data-aos="fade-right" data-topic="education">
-        <h3>High School Diploma in Science</h3>
-        <span>2018 – 2020 | IES Carlos III, Toledo</span>
-        <p>Scientific baccalaureate with a focus on mathematics, physics, and computer science foundations.</p>
-      </div>
-      <div class="timeline-item" data-aos="fade-left" data-topic="education">
-        <h3>Bachelor's Degree in Computer Science</h3>
-        <span>2020 – 2025 | University of Castilla-La Mancha (UCLM)</span>
-        <p>Comprehensive training in algorithms, data structures, software engineering, databases, cybersecurity, and artificial intelligence.</p>
-      </div>
-      <div class="timeline-item" data-aos="fade-right" data-topic="support">
-        <h3>Intern in Information Technologies - UCLM</h3>
-        <span>January 2022 – December 2023</span>
-        <p>Collaborated in provisioning, maintenance, and upgrade of equipment for personal use and classrooms. Assisted with network issues, video conferencing, and TIC-related incidents. Gained hands-on experience in IT operations and organizational support.</p>
-      </div>
-      <div class="timeline-item" data-aos="fade-left" data-topic="support">
-        <h3>IT Support Engineer - Caja Rural de Toledo</h3>
-        <span>July 2024 – September 2024</span>
-        <p>Provided technical support, system maintenance, and troubleshooting for end users. Gained experience in enterprise IT environments and client-oriented service.</p>
-      </div>
+        <div class="timeline-item" data-aos="fade-right" data-topic="education">
+            <h3>High School Diploma in Science</h3>
+            <span>2018 – 2020 | IES Carlos III, Toledo</span>
+            <p>Scientific baccalaureate with a focus on mathematics, physics, and computer science foundations.</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-left" data-topic="uclm">
+            <h3>Bachelor's Degree in Computer Science</h3>
+            <span>2020 – 2025 | University of Castilla-La Mancha (UCLM)</span>
+            <p>Comprehensive training in algorithms, data structures, software engineering, databases, cybersecurity, and artificial intelligence.</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-right" data-topic="uclm">
+            <h3>Intern in Information Technologies - UCLM</h3>
+            <span>January 2022 – December 2023</span>
+            <p>Collaborated in provisioning, maintenance, and upgrade of equipment for personal use and classrooms. Assisted with network issues, video conferencing, and TIC-related incidents. Gained hands-on experience in IT operations and organizational support.</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-left" data-topic="cajarural">
+            <h3>IT Support Engineer - Caja Rural de Toledo</h3>
+            <span>July 2024 – September 2024</span>
+            <p>Provided technical support, system maintenance, and troubleshooting for end users. Gained experience in enterprise IT environments and client-oriented service.</p>
+        </div>
     </div>
-  </section>
+</section>
 
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill" data-aos="zoom-in" data-aos-delay="100">AWS</div>
-      <div class="skill" data-aos="zoom-in" data-aos-delay="200">Docker</div>
-      <div class="skill" data-aos="zoom-in" data-aos-delay="300">Kubernetes</div>
-      <div class="skill" data-aos="zoom-in" data-aos-delay="400">Python</div>
-      <div class="skill" data-aos="zoom-in" data-aos-delay="500">Machine Learning</div>
-      <div class="skill" data-aos="zoom-in" data-aos-delay="600">Node.js</div>
-      <div class="skill" data-aos="zoom-in" data-aos-delay="700">Linux</div>
-      <div class="skill" data-aos="zoom-in" data-aos-delay="800">CI/CD</div>
-      <div class="skill" data-aos="zoom-in" data-aos-delay="900">Terraform</div>
-      <div class="skill" data-aos="zoom-in" data-aos-delay="1000">Git</div>
+    <section id="skills" class="section">
+        <h2 data-lang-key="skillsTitle">Skills</h2>
+        <div class="skills-categories">
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="0">
+                <h3 data-lang-key="skillsDevOpsTitle">DevOps & Cloud</h3>
+                <div class="skills-grid">
+                    <div class="skill" data-lang-key="skillCICD">CI/CD</div>
+                    <div class="skill" data-lang-key="skillGit">Git</div>
+                </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                <h3 data-lang-key="skillsProgrammingTitle">Programming Languages & Frameworks</h3>
+                <div class="skills-grid">
+                    <div class="skill" data-lang-key="skillPython">Python</div>
+                    <div class="skill" data-lang-key="skillNodejs">Node.js</div>
+                    <div class="skill" data-lang-key="skillJava">Java</div>
+                    <div class="skill" data-lang-key="skillCpp">C++</div>
+                    <div class="skill" data-lang-key="skillDart">Dart</div>
+                    <div class="skill" data-lang-key="skillFlutter">Flutter</div>
+                </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                <h3 data-lang-key="skillsDatabasesTitle">Databases & Data Management</h3>
+                <div class="skills-grid">
+                    <div class="skill" data-lang-key="skillSQL">SQL</div>
+                    <div class="skill" data-lang-key="skillNoSQL">NoSQL</div>
+                    <div class="skill" data-lang-key="skillPostgreSQL">PostgreSQL</div>
+                    <div class="skill" data-lang-key="skillMongoDB">MongoDB</div>
+                    <div class="skill" data-lang-key="skillFirebase">Firebase</div>
+                </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                <h3 data-lang-key="skillsAITitle">AI & Machine Learning</h3>
+                <div class="skills-grid">
+                    <div class="skill" data-lang-key="skillML">Machine Learning</div>
+                    <div class="skill" data-lang-key="skillDL">Deep Learning</div>
+                    <div class="skill" data-lang-key="skillJira">Jira</div>
+                </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                <h3 data-lang-key="skillsTestingTitle">Testing & QA</h3>
+                <div class="skills-grid">
+                    <div class="skill" data-lang-key="skillJiraTesting">Jira</div>
+                    <div class="skill" data-lang-key="skillSelenium">Selenium</div>
+                    <div class="skill" data-lang-key="skillTrello">Trello</div>
+                </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+                <h3 data-lang-key="skillsSoftTitle">Soft Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill" data-lang-key="skillProblemSolving">Problem Solving</div>
+                    <div class="skill" data-lang-key="skillTeamwork">Teamwork</div>
+                    <div class="skill" data-lang-key="skillCommunication">Communication</div>
+                    <div class="skill" data-lang-key="skillAdaptability">Adaptability</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section bg-light-gray">
+        <h2 data-lang-key="projectsTitle">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-item" data-aos="fade-up">
+                <h3 data-lang-key="projectDogAppTitle">Fauna Club</h3>
+                <p data-lang-key="projectDogAppDesc">Flutter-based mobile app for pet owners, pet sitters and trainers. Features: calendar, cloud functions, chat, and map with social features.</p>
+                <a href="https://github.com/pedromc11/TFG-report" target="_blank" class="project-link" data-lang-key="projectLink">View on GitHub</a>
+            </div>
+            <div class="project-item" data-aos="fade-up" data-aos-delay="100">
+                <h3 data-lang-key="projectSmartHomeTitle">IoT Smart Environment Monitoring System</h3>
+                <p data-lang-key="projectSmartHomeDesc">This repository contains the essential components for an IoT system designed to monitor environmental conditions and presence. It leverages ESP32 microcontrollers for sensing and gateway functionalities, and a Raspberry Pi as a central server running an MQTT broker.</p>
+                <a href="https://github.com/pedromc11/IoT-Smart-Environment" target="_blank" class="project-link" data-lang-key="projectLink">View on GitHub</a>
+            </div>
+            <div class="project-item" data-aos="fade-up" data-aos-delay="200">
+                <h3 data-lang-key="projectNeuralNetTitle">Optical Store Management System</h3>
+                <p data-lang-key="projectNeuralNetDesc">Optica Vision is an Odoo-based management system designed specifically for optical stores. It streamlines various operations, from managing product warranties and repairs to scheduling customer revisions and maintaining store information.</p>
+                <a href="https://github.com/pedromc11/Optica-Vision" target="_blank" class="project-link" data-lang-key="projectLink">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+    <h2 data-lang-key="contactTitle">Contact Me</h2>
+    <div class="contact-buttons" data-aos="fade-up">
+        <a href="mailto:pedromceuropa@gmail.com" class="btn contact-btn" data-lang-key="contactSendEmail">Send Email</a>
+        <a href="tel:+34601466343" class="btn contact-btn" data-lang-key="contactCallMe">Call Me (+34 601 466 343)</a>
     </div>
-  </section>
+</section>
 
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project" data-aos="fade-up">
-        <h3>Dog Community App</h3>
-        <p>Flutter-based mobile app for dog owners and trainers. Features: calendar, chat, and map with social features.</p>
-        <a href="https://github.com/pedromc11/dog-community-app" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project" data-aos="fade-up" data-aos-delay="100">
-        <h3>Smart Home Automation System</h3>
-        <p>IoT project integrating various smart devices for home automation, controlled via a web interface and voice commands (Python, Raspberry Pi, MQTT).</p>
-        <a href="https://github.com/pedromc11/smart-home-system" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project" data-aos="fade-up" data-aos-delay="200">
-        <h3>Neural Network for Image Recognition</h3>
-        <p>A deep learning project implementing a Convolutional Neural Network (CNN) for image classification (Python, TensorFlow/Keras).</p>
-        <a href="https://github.com/pedromc11/image-recognition-cnn" target="_blank">View on GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <form id="contact-form">
-      <input type="text" name="name" placeholder="Pedro Mena Castellanos" required />
-      <input type="email" name="email" placeholder="pedromceuropa@gmail.com" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Pedro Mena Castellanos. All rights reserved.</p>
-  </footer>
+    <footer>
+    <p data-lang-key="footerCopyright"> &copy; 2025 Pedro Mena Castellanos. All rights reserved.</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-    AOS.init({
-      once: true,
-      duration: 800,
-      easing: 'ease-out'
-    });
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out'
+        });
     </script>
-
-    <script>
-    function toggleTheme() {
-        document.body.classList.toggle('green-theme');
-    }
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
