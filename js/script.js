@@ -208,24 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
         easing: 'ease-out'
     });
 
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navbar = document.querySelector('.navbar');
-    const navLinks = document.querySelectorAll('.navbar a');
-
-    if (menuToggle && navbar) {
-        menuToggle.addEventListener('click', () => {
-            navbar.classList.toggle('active'); 
-        });
-    }
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navbar.classList.contains('active')) {
-                navbar.classList.remove('active');
-            }
-        });
-    });
-
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
