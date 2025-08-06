@@ -30,6 +30,9 @@ const translations = {
         cajaRuralTitle: "Ingeniero de Soporte IT - Caja Rural de Toledo",
         cajaRuralDate: "Julio 2024 – Septiembre 2024",
         cajaRuralDesc: "Proporcioné soporte técnico, mantenimiento de sistemas y resolución de problemas para usuarios finales. Adquirí experiencia en entornos de TI empresariales y servicio orientado al cliente.",
+        zennioTitle:"Ingeniero de pruebas funcionales - Zennio",
+        zennioDate:"Septiembre 2025 - Hoy",
+        zennioDesc:"Responsable de evaluar y garantizar la calidad de los productos de software durante su ciclo de producción.",
 
         skillsTitle: "Habilidades",
         skillsDevOpsTitle: "DevOps y Nube",
@@ -116,6 +119,9 @@ const translations = {
         cajaRuralTitle: "IT Support Engineer - Caja Rural de Toledo",
         cajaRuralDate: "July 2024 – September 2024",
         cajaRuralDesc: "Provided technical support, system maintenance, and troubleshooting for end users. Gained experience in enterprise IT environments and client-oriented service.",
+        zennioTitle:"Functional Test Engineer - Zennio",
+        zennioDate:"September 2025 - Now",
+        zennioDesc:"Responsible for evaluating and ensuring the quality of software products during their production cycle.",
 
         skillsTitle: "Skills",
         skillsDevOpsTitle: "DevOps & Cloud",
@@ -187,7 +193,7 @@ function applyTranslations(lang) {
         metaDescription.setAttribute('content', translations[lang]['metaDescription']);
     }
 
-    const metaTitle = document.querySelector('title[data-lang-key="metaTitle"]');
+    const metaTitle = document.querySelector('title');
     if (metaTitle && translations[lang] && translations[lang]['metaTitle']) {
         metaTitle.textContent = translations[lang]['metaTitle'];
     }
@@ -200,6 +206,24 @@ document.addEventListener('DOMContentLoaded', () => {
         once: true,
         duration: 800,
         easing: 'ease-out'
+    });
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.navbar a');
+
+    if (menuToggle && navbar) {
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active'); 
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navbar.classList.contains('active')) {
+                navbar.classList.remove('active');
+            }
+        });
     });
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

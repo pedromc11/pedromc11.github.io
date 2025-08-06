@@ -1,112 +1,3 @@
-/* --- RESET Y FUENTES --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #ffffff; /* Fondo blanco predeterminado */
-    color: #333;
-    line-height: 1.6;
-    scroll-behavior: smooth;
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-/* --- COLORES TEMÁTICOS --- */
-:root {
-    --primary-color: #3f51b5; /* Azul índigo (similar al de Pablo) */
-    --secondary-color: #ff4081; /* Rosa vibrante (acento) */
-    --text-color: #333;
-    --light-gray: #f4f4f4; /* Gris claro para secciones alternas */
-    --dark-gray: #555;
-    --white: #ffffff;
-    --shadow-light: rgba(0, 0, 0, 0.08);
-    --shadow-medium: rgba(0, 0, 0, 0.15);
-
-    /* Nuevas variables para el degradado del Home Section */
-    --home-gradient-start: #000000; /* Negro puro */
-    --home-gradient-end-primary: #3f51b5; /* Azul del tema principal */
-    --home-gradient-end-secondary: #ff4081; /* Rosa del tema principal */
-}
-
-body.green-theme {
-    --primary-color: #4CAF50; /* Verde más brillante */
-    --secondary-color: #FFC107; /* Amarillo para acento */
-    --text-color: #212121;
-    --light-gray: #e8f5e9; /* Verde claro para secciones */
-    --dark-gray: #424242;
-    --white: #ffffff;
-    --shadow-light: rgba(0, 0, 0, 0.08);
-    --shadow-medium: rgba(0, 0, 0, 0.15);
-
-    /* Nuevas variables para el degradado del Home Section en tema verde */
-    --home-gradient-start: #000000; /* Negro puro */
-    --home-gradient-end-primary: #4CAF50; /* Verde del tema verde */
-    --home-gradient-end-secondary: #FFC107; /* Amarillo del tema verde */
-}
-
-/* --- ESTILOS GENERALES --- */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section {
-    padding: 80px 0;
-    text-align: center;
-    overflow: hidden; /* Para animaciones AOS */
-}
-
-.section.bg-light-gray {
-    background-color: var(--light-gray);
-}
-
-h1, h2, h3 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 2.8em;
-    margin-bottom: 50px;
-    position: relative;
-    display: inline-block;
-    font-weight: 700;
-}
-
-h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -15px;
-    transform: translateX(-50%);
-    width: 70px;
-    height: 4px;
-    background-color: var(--secondary-color);
-    border-radius: 2px;
-}
-
-.btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 8px var(--shadow-light);
-}
-
-.btn:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px var(--shadow-medium);
-}
-
 /* --- HEADER --- */
 header {
     background-color: var(--white);
@@ -129,16 +20,28 @@ header .container {
     color: var(--primary-color);
 }
 
-/* Estilo para la imagen del logo */
+/* Styling for the logo image */
 .logo-img {
-    height: 40px; /* Ajusta la altura de tu logo aquí */
-    width: auto; /* Mantiene la proporción de la imagen */
-    vertical-align: middle; /* Alinea verticalmente con el texto si hubiera */
+    height: 40px; /* Adjust your logo's height here */
+    width: auto; /* Maintains image aspect ratio */
+    vertical-align: middle; /* Vertically aligns with text if present */
+}
+
+/* 🆕 NEW: Hamburger menu toggle button */
+.menu-toggle {
+    display: none; /* Hidden by default on larger screens */
+    font-size: 2em; /* Icon size */
+    cursor: pointer;
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    padding: 0;
+    z-index: 1100; /* Ensures it's above the navbar when expanded */
 }
 
 .navbar ul {
     list-style: none;
-    display: flex;
+    display: flex; /* Makes navigation bar items display inline */
 }
 
 .navbar li {
@@ -173,7 +76,7 @@ header .container {
     width: 100%;
 }
 
-/* --- TEMA DINÁMICO BOTÓN --- */
+/* --- DYNAMIC THEME BUTTON --- */
 .theme-toggle-btn {
     background-color: var(--secondary-color);
     color: var(--white);
@@ -220,16 +123,16 @@ header .container {
 
 /* --- HOME SECTION --- */
 .home-section {
-    padding: 120px 0; /* Más padding para centrar */
+    padding: 120px 0; /* More padding for centering */
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 85px); /* Ajuste para el header */
-    color: var(--white); /* Texto blanco para el fondo oscuro */
-    text-shadow: 0 2px 4px rgba(0,0,0,0.4); /* Sombra para mejor legibilidad */
-    /* Degradado de fondo */
+    min-height: calc(100vh - 85px); /* Adjustment for header */
+    color: var(--white); /* White text for dark background */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4); /* Shadow for better readability */
+    /* Background gradient */
     background: linear-gradient(to right, var(--home-gradient-start) 0%, var(--home-gradient-end-primary) 70%, var(--home-gradient-end-secondary) 100%);
-    transition: background 0.5s ease; /* Transición para el cambio de tema */
+    transition: background 0.5s ease; /* Transition for theme change */
 }
 
 .home-content {
@@ -242,18 +145,18 @@ header .container {
 .home-content h1 {
     font-size: 3.8em;
     margin-bottom: 10px;
-    color: var(--white); /* Color blanco para el h1 en fondo oscuro */
+    color: var(--white); /* White color for h1 on dark background */
     font-weight: 700;
 }
 
 .home-content h2 {
     font-size: 1.8em;
-    color: var(--white); /* Color blanco para el h2 en fondo oscuro */
+    color: var(--white); /* White color for h2 on dark background */
     margin-bottom: 20px; /* Adjusted: Reduced from 40px to 20px to bring button closer */
     font-weight: 300;
 }
 
-.home-content h2::after { /* Eliminar el underline del h2 en home */
+.home-content h2::after { /* Remove underline from h2 in home section */
     display: none;
 }
 
@@ -323,7 +226,7 @@ header .container {
     margin-bottom: 0;
 }
 
-/* --- Izquierda (odd) --- */
+/* --- Left (odd) --- */
 .timeline-item:nth-child(odd) {
     float: left;
     clear: both;
@@ -331,7 +234,7 @@ header .container {
     text-align: right;
 }
 
-/* --- Derecha (even) --- */
+/* --- Right (even) --- */
 .timeline-item:nth-child(even) {
     float: right;
     clear: both;
@@ -339,7 +242,7 @@ header .container {
     text-align: left;
 }
 
-/* --- CÍRCULO CENTRAL CON IMAGEN O ICONO --- */
+/* --- CENTRAL CIRCLE WITH IMAGE OR ICON --- */
 .timeline-item::before {
     content: '';
     position: absolute;
@@ -363,39 +266,45 @@ header .container {
     z-index: 3;
 }
 
-/* --- Posición del círculo izquierda (odd) --- */
+/* --- Circle position left (odd) --- */
 .timeline-item:nth-child(odd)::before {
     right: -24px;
     transform: translateX(50%);
 }
 
-/* --- Posición del círculo derecha (even) --- */
+/* --- Circle position right (even) --- */
 .timeline-item:nth-child(even)::before {
     left: -24px;
     transform: translateX(-50%);
 }
 
-/* --- Personalización por tipo de item usando data-topic --- */
+/* --- Customization by item type using data-topic --- */
 
-/* Ícono para Educación (usa Font Awesome) */
+/* Icon for Education (uses Font Awesome) */
 .timeline-item[data-topic="education"]::before {
-    content: "\f19d"; /* Ícono de gorro de graduación */
-    background: var(--white); /* Asegura fondo blanco */
+    content: "\f19d"; /* Graduation cap icon */
+    background: var(--white); /* Ensure white background */
 }
 
-/* Imagen como fondo para UCLM */
+/* Image as background for UCLM */
 .timeline-item[data-topic="uclm"]::before {
     content: '';
     background-image: url('../images/uclm.png');
 }
 
-/* Imagen como fondo para Caja Rural */
+/* Image as background for Caja Rural */
 .timeline-item[data-topic="cajarural"]::before {
     content: '';
     background-image: url('../images/cajarural.jpg');
 }
 
-/* --- CONTENIDO DEL ITEM --- */
+/* Image as background for Zennio */
+.timeline-item[data-topic="zennio"]::before {
+    content: '';
+    background-image: url('../images/zennio.png');
+}
+
+/* --- ITEM CONTENT --- */
 
 .timeline-item h3 {
     font-size: 1.4em;
@@ -418,29 +327,92 @@ header .container {
 }
 
 
-/* --- MEDIA QUERIES (Responsividad) --- */
+/* --- MEDIA QUERIES (Responsiveness) --- */
 @media (max-width: 768px) {
-    .timeline {
-        max-width: 100%; /* Ocupa todo el ancho disponible */
-        padding: 0 20px; /* Añade padding a los lados */
+    /* 🆕 MODIFIED: Header container adjustments on small screens */
+    header .container {
+        flex-direction: row; /* Keep logo, toggle, and flags in a row */
+        justify-content: space-between; /* Space them out */
+        padding: 10px 20px; /* Padding for header on mobile */
     }
 
-    /* En pantallas pequeñas, volvemos a una sola columna a la izquierda */
+    /* 🆕 NEW: Show hamburger button and hide regular navbar */
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    .navbar {
+        /* Hide navigation by default on mobile and prepare for expansion */
+        display: none; /* Initially hidden */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust this if your header has a different height */
+        left: 0;
+        background-color: var(--white);
+        box-shadow: 0 5px 15px var(--shadow-light);
+        padding: 20px 0;
+        z-index: 999;
+        overflow: hidden; /* Important for height animation */
+        max-height: 0; /* Hide menu initially with max-height of 0 */
+        transition: max-height 0.3s ease-out; /* Smooth open animation */
+    }
+
+    .navbar.active {
+        display: flex; /* Becomes visible when active */
+        max-height: 300px; /* Sufficient height to show all items. Adjust if needed. */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center; /* Center menu items in vertical mode */
+        margin-top: 0; /* Reset top margin */
+    }
+
+    .navbar li {
+        margin: 15px 0; /* Vertical space between menu items */
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar a {
+        font-size: 1.1em; /* Slightly larger for easier tapping on mobile */
+        padding: 10px 0;
+        display: block; /* Makes the clickable area larger */
+    }
+
+    .navbar a::after { /* Adjust underline position to center on mobile */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .navbar a:hover::after {
+        width: 60%; /* Underline width on hover for mobile */
+    }
+
+    .theme-toggle-btn {
+        margin-top: 0; /* Reset top margin, as it won't be below the navbar */
+    }
+
+    .timeline {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
     .timeline::after {
-        left: 30px; /* Mueve la línea a la izquierda */
-        transform: none; /* Elimina la transformación */
+        left: 30px;
+        transform: none;
     }
 
     .timeline-item {
-        width: 100%; /* Ocupa todo el ancho */
-        padding-left: 50px; /* Padding para el contenido */
-        padding-right: 0; /* Elimina padding derecho */
-        text-align: left; /* Alinea todo a la izquierda */
-        float: none; /* Elimina el float */
-        clear: both; /* Limpia el float */
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 0;
+        text-align: left;
+        float: none;
+        clear: both;
     }
 
-    /* Reset para ítems pares para que se comporten como impares en móvil */
     .timeline-item:nth-child(even) {
         left: 0;
         padding-left: 50px;
@@ -449,227 +421,17 @@ header .container {
         clear: both;
     }
 
-    /* Posición del círculo para todos los ítems en móvil */
     .timeline-item::before {
-        left: 21px; /* Posiciona el círculo junto a la línea */
-        right: auto; /* Desactiva la propiedad right */
-        transform: none; /* Elimina la transformación */
-    }
-
-    /* Posición de la IMAGEN para todos los ítems en móvil */
-    .timeline-item::after {
-        left: 21px; /* Posiciona la imagen junto a la línea, igual que el círculo */
+        left: 21px;
         right: auto;
         transform: none;
-        top: 25px; /* Asegura que la imagen esté alineada con el círculo en móvil también */
-    }
-}
-
-/* --- SKILLS SECTION (Agrupada) --- */
-.skills-categories {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 1, 2 o 3 columnas dependiendo del espacio */
-    gap: 30px;
-    max-width: 1200px;
-    margin: 40px auto 0 auto;
-    text-align: left; /* Alinea el texto de los títulos de categoría */
-}
-
-.skill-category {
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px var(--shadow-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column; /* Organiza título y grid de skills verticalmente */
-}
-
-.skill-category:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px var(--shadow-medium);
-}
-
-.skill-category h3 {
-    font-size: 1.8em;
-    color: var(--primary-color);
-    margin-bottom: 25px;
-    font-weight: 600;
-    text-align: center; /* Centra el título de la categoría */
-}
-
-.skills-grid { /* Este es el grid DENTRO de cada categoría */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Skills más pequeñas */
-    gap: 10px;
-    width: 100%; /* Ocupa el 100% del contenedor de la categoría */
-}
-
-.skill {
-    background-color: var(--light-gray); /* Fondo más suave para las skills individuales */
-    color: var(--dark-gray);
-    padding: 10px 15px;
-    border-radius: 5px; /* Bordes menos redondeados */
-    font-weight: 400; /* Fuente más ligera */
-    font-size: 1em;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra más sutil */
-    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 50px; /* Un poco más pequeños */
-    text-align: center;
-}
-
-.skill:hover {
-    transform: translateY(-3px);
-    background-color: var(--primary-color); /* Hover a primary-color */
-    color: var(--white);
-    box-shadow: 0 4px 8px var(--shadow-light);
-}
-
-/* --- PROJECTS SECTION --- */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-    text-align: left;
-}
-
-.project-item {
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px var(--shadow-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Para que el botón esté abajo */
-}
-
-.project-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px var(--shadow-medium);
-}
-
-.project-item h3 {
-    font-size: 1.6em;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-.project-item p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: var(--dark-gray);
-    margin-bottom: 20px;
-    flex-grow: 1; /* Para que ocupe el espacio disponible */
-}
-
-.project-link {
-    display: inline-block;
-    background-color: var(--secondary-color);
-    color: var(--white);
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    align-self: flex-start; /* Alinea el botón a la izquierda */
-    box-shadow: 0 2px 5px var(--shadow-light);
-}
-
-.project-link:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px var(--shadow-medium);
-}
-
-/* --- CONTACT SECTION --- */
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 600px;
-    margin: 40px auto 0 auto;
-    padding: 40px;
-    background-color: var(--white);
-    border-radius: 10px;
-    box-shadow: 0 5px 20px var(--shadow-light);
-}
-
-#contact-form input,
-#contact-form textarea {
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1em;
-    color: var(--text-color);
-    background-color: var(--light-gray);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#contact-form input:focus,
-#contact-form textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.2);
-    background-color: var(--white);
-}
-
-#contact-form textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-#contact-form button {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px var(--shadow-light);
-}
-
-#contact-form button:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px var(--shadow-medium);
-}
-
-/* --- FOOTER --- */
-footer {
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-    padding: 25px 0;
-    font-size: 0.9em;
-}
-
-/* --- MEDIA QUERIES --- */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        text-align: center;
     }
 
-    .navbar ul {
-        flex-direction: column;
-        margin-top: 20px;
-        align-items: center;
-    }
-
-    .navbar li {
-        margin: 10px 0;
-    }
-
-    .theme-toggle-btn {
-        margin-top: 20px;
+    .timeline-item::after {
+        left: 21px;
+        right: auto;
+        transform: none;
+        top: 25px;
     }
 
     .home-section {
@@ -692,21 +454,13 @@ footer {
         padding: 60px 0;
     }
 
-    .timeline {
-        padding-left: 20px;
-    }
-
-    .timeline-item::before {
-        left: -18px;
-    }
-
-    .skills-categories { /* Grid de 1 columna para categorías en móvil */
+    .skills-categories {
         grid-template-columns: 1fr;
         padding: 0 20px;
     }
 
     .projects-grid {
-        grid-template-columns: 1fr; /* Una columna en móviles */
+        grid-template-columns: 1fr;
         padding: 0 20px;
     }
 
