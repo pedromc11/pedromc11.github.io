@@ -1,55 +1,28 @@
-# My Personal Portfolio 🚀
+# Pedro Mena Castellanos — Portfolio
 
-Welcome to my personal portfolio! This repository showcases my skills, projects, and professional journey. It's designed to provide a comprehensive overview of my work and expertise.
+Portfolio personal bilingüe (español e inglés), preparado para GitHub Pages.
 
----
+## Contenido
 
-## About This Portfolio ✨
+- `index.html`: versión en español.
+- `en/index.html`: versión en inglés.
+- `css/style.css`: estilos, diseño adaptable a móvil, tablet y escritorio, y preferencias de tema.
+- `js/site.js`: menú móvil y cambio de tema.
+- `images/`: fotografía y recursos gráficos originales del repositorio.
+- `robots.txt` y `sitemap.xml`: directivas para rastreadores y mapa del sitio.
 
-This portfolio is a single-page application built to be responsive and visually appealing. It highlights key sections such as:
+## Publicación
 
-* **About Me:** A brief introduction to who I am and my professional background.
-* **Education & Experience:** A timeline detailing my academic achievements and professional roles.
-* **Skills:** An overview of my technical and soft skills.
-* **Projects:** A showcase of some of my notable projects.
-* **Contact:** Ways to get in touch with me.
+Sube el contenido de esta carpeta a la raíz del repositorio `pedromc11.github.io`. Conserva las rutas y nombres de carpetas. En GitHub, abre **Settings → Pages** y comprueba que la publicación utiliza la rama principal y la carpeta raíz (`/(root)`).
 
----
+## SEO y accesibilidad
 
-## Technologies & Libraries Used 🛠️
+Incluye títulos y descripciones por idioma, URL canónica, `hreflang`, Open Graph, Twitter Cards, datos estructurados `Person` en JSON-LD, `robots.txt`, sitemap XML, HTML semántico, enlace para saltar al contenido, etiquetas accesibles y textos alternativos en imágenes.
 
-This project leverages a combination of standard web technologies and popular libraries to deliver a modern and interactive user experience.
+## Información profesional
 
-* **HTML5:** For the structure and content of the web page.
-* **CSS3:** For styling and layout, including responsive design.
-* **JavaScript (ES6+):** For interactive elements and dynamic content.
-* **Font Awesome 6 Free:** For scalable vector icons used throughout the site.
-* **Google Fonts:** For custom typography to enhance readability and aesthetics.
+La experiencia, educación, habilidades y proyectos se han redactado a partir del portfolio original proporcionado. No se han añadido certificaciones ni credenciales que no aparezcan documentadas en ese material. Si quieres incluir formación complementaria, añade únicamente los nombres, emisores y fechas que puedas confirmar.
 
----
+## Tecnologías
 
-## Setup and Usage 🚀
-
-To view this portfolio locally:
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/pedromc11/pedromc11.github.io.git](https://github.com/pedromc11/pedromc11.github.io.git)
-    ```
-2.  **Navigate to the project directory:**
-    ```bash
-    cd your-portfolio-repo
-    ```
-3.  **Open `index.html`:** Simply open the `index.html` file in your preferred web browser.
-
----
-
-## Contact Me 📧
-
-Feel free to reach out if you have any questions, opportunities, or just want to connect!
-
-* **Email:** [pedromceuropa@gmail.com]
-
----
-
-Thank you for visiting my portfolio!
+HTML5, CSS3 y JavaScript nativo. No requiere proceso de compilación ni dependencias.
